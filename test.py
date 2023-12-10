@@ -50,6 +50,8 @@ print (list + tinylist) # Prints concatenated lists """
 
 #range(start, stop, step)   - All integers
 
+#Dictionary keys should be immutable objects, and cann't appear more than once in a collection
+#if a key is saved twice, the last one will remain
 dict = {} #Dictionary is not a sequence, but it is mutable, you can add, modify and delete
 dict['one'] = "Value for the first key"
 dict[2] = "Value for the second key"
@@ -104,3 +106,73 @@ listCasting = list("Hello") #['H','e','l','l','o']
 tupleCasting = tuple("Hello") #('H','e','l','l','o')
 strCasting4 = str([1,2,3,4,5]) #'[1, 2, 3, 4, 5]'
 
+# Podemos convertir a int, long, float, complex, str, repr
+# eval, tuple, list, set, dict, frozenset, chr, unichr, ord
+# hex, oct
+
+var = "3/4"
+print(var)
+var = "\u00BE"
+print(var)
+
+# Python's unicode support
+toencode = "Hello"
+onbytes = toencode.encode('utf-8') #Encoding string
+print(onbytes)
+todecode = onbytes.decode('utf-8') #Decoding byte object back to str
+print(todecode)
+
+toencode = "\u20B9"
+print("\n\n", toencode)
+onbytes = toencode.encode('utf-8') #Encoding Rupee symbol
+print(onbytes)
+todecode = onbytes.decode('utf-8')
+print(todecode)
+
+#Python literal's ¿
+print("\n\n")
+octal = 0O34
+print("0O34 in octal is", octal, type(octal))
+hexa = 0X1c
+print("0X1c in Hexadecimal is",hexa, type(hexa))
+
+#Default delimiter for Python sequence is parentheses, so if you
+#don't add anything on a comma separated sequence it becomes a tuple
+T1=1,"Ravi",75.50, True
+print (T1, type(T1))
+
+
+#Operators
+## Arithmetic, Comparison, Assignment, Logical
+## Bitwise, Membership, Identity
+
+#Arithmetic + - * / % ** //
+#Comparison == != < <= => >
+#Assignment = += -= *= /= %= **= //= &= |= ^= >>= <<=
+#Bitwise & | ^ ~ << >>
+#Logical and or not
+#Membership     in      not in
+#Identity       is      is not
+
+##Operators precedence
+# () [] {}
+# [index] [index:index]
+# await x
+# **
+# ~x +x -x
+# * @ / % //
+# + -
+# >> <<
+# &
+# ^ |
+# <= < > >=
+# <> == !=
+# = %= /= //= -= += *= **=
+# is is not
+# in not in
+# not or and
+# if - else
+# lambda
+# :=
+
+# https://www.tutorialspoint.com/python/python_assignment_operators.htm
