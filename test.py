@@ -1,6 +1,6 @@
 # Este archivo contiene todas las notas que tome del tutorial
 # https://www.tutorialspoint.com/python/index.htm
-# durante la sección de python basics, que incluye
+# durante la sección de Python Basics, que incluye
 # entrada y escritura, tipos de datos, casteo de datos
 # diferencia con c++, operadores
 
