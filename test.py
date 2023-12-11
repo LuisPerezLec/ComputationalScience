@@ -1,3 +1,9 @@
+# Este archivo contiene todas las notas que tome del tutorial
+# https://www.tutorialspoint.com/python/index.htm
+# durante la sección de python basics, que incluye
+# entrada y escritura, tipos de datos, casteo de datos
+# diferencia con c++, operadores
+
 #raw_input("\n\nPress the enter key to exit")
 import sys;
 x = "foo"; print(id(x)) #Con id imprimimos la ubicacion en memoria
@@ -231,5 +237,42 @@ print(sys.maxsize) #Max size for int (64bits or 8bytes)
 
 print("a:7", 7>>2) #1
 
-#Me quedé en
-#https://www.tutorialspoint.com/python/python_membership_operators.htm
+#Membership operators
+print("Does Universidad contains sida?", ("sida" in "Universidad"))
+print("Does Universidad contains uni?", ("uni" in "Universidad"), "\n")
+
+arreglo = [10, 11, 12, 15, 17, 31]
+print("Is 12 in the array?", (12 in arreglo))
+print("Is 13 in the array?", (13 in arreglo))
+print("Is 10 in the array?", (0b1010 in arreglo)) #The membership operators can compare between different formats
+
+#Membership operators work on list, tuple, dicts and sets
+#but if you try to check two successive items, it will only
+#print true if them are on a sequence themselves
+tupleCheck = (10,20,30,40)
+print((10,20), "in", tupleCheck, ":", (10,20) in tupleCheck)
+tupleCheck2 = ((10,20),30,40)
+print((10,20), "in", tupleCheck2, ":", (10,20) in tupleCheck2)
+
+#for dicts, membership operators only evaluate if the key is included
+dictCheck = {1:10, 2:20, 3:30}
+print (2, "in", dictCheck, ":", 2 in dictCheck)
+print (20, "in", dictCheck, ":", 20 in dictCheck)
+
+#Identity operators -> Print true if 2 items have the same memory location
+#List and tuple behave differently, even if two lists contain
+#the same items, they don't share the memory location
+listCheck1, listCheck2 = [1,2,3], [1,2,3]
+print("Equal lists are the same?", listCheck1 is listCheck2)
+#They'll be different, even if each object individually is the same
+
+#Input functions
+#raw_input() <- Funcion original
+#input() <- A partir de la 2.7
+entrada = input("\n\nCuál es tu nombre? ")
+print("Me importa un carajo")
+response = input()
+print("Era broma ", entrada, ", gusto en conocerte", sep="")
+numero = int(input("Dame tu número favorito: ")) #Por default el input recibe str
+print(numero, "x 2 es", numero*2, end="")
+print("\tViste eso? Omiti el salto de linea!")
