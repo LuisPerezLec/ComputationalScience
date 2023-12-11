@@ -175,4 +175,61 @@ print (T1, type(T1))
 # lambda
 # :=
 
-# https://www.tutorialspoint.com/python/python_assignment_operators.htm
+# Logical operators
+
+logicalOperator1, logicalOperator2 = 5, 10
+if logicalOperator1 <10 and logicalOperator2 >5:
+    print("Hola mundo")
+
+print ("not (x+y>15):", not (logicalOperator1+logicalOperator2)>15)
+
+# The expression  "x and y" first evaluates "x". If "x" is false, its value is returned, otherwhise "y" is evaluated and is returned
+print(10 and 30) #30
+print(30 and 10) #10
+print(0 and 40) #0
+print(50 and 0) #0
+
+# The expresion "x or y" first evaluates "x". If "x" is true, its value is returned, otherwise "y" is evaluated and returned
+print(10 or 30) #10
+print(30 or 10) #30
+print(0 or 40) #40
+print(50 or 0) #50
+
+# Bitwise operators
+bitwise1, bitwise2 = 60, 13
+print("a: ",a, "b:",b, "a&b:", a&b) #12
+
+# 0011 1100
+# &
+# 0000 1101
+# ---------
+# 0000 1100  -> 12
+
+# ^ -> XOR
+print(~10)
+print(~-10)
+#00001010 10 a negativo complemento -1
+#11110101 -> -11
+
+#11110110 -> -10
+#00001001 -> 9
+
+import sys
+print(sys.maxsize) #Max size for int (64bits or 8bytes)
+
+#Left shift operator
+#a: 60 a<<2: 240
+#0011 1100
+#<<2
+#1111 0000
+
+#Right shift operator
+#a:60 a>>2:15
+#0011 1100
+#>>2
+#0000 1111
+
+print("a:7", 7>>2) #1
+
+#Me quedé en
+#https://www.tutorialspoint.com/python/python_membership_operators.htm
