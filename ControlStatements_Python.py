@@ -1,3 +1,9 @@
+#This file corresponds to the exercises result of the next tutorial
+#https://www.tutorialspoint.com/python/python_control_flow.htm
+#This tutorial contains the use of if, elif, else, match, case, break
+# Loop for, for "in", range, for on dicts, 
+#While, and else, break, continue, pass/... for loops
+
 marks = 80
 result = ""
 if marks < 30:
@@ -117,4 +123,45 @@ while cuenta < 5:
     cuenta+=1
     print(f"Iteration no. {cuenta}")
 print("Endo of while loop")
-#https://www.tutorialspoint.com/python/python_while_loops.htm
+
+paraWhileElse = 0
+while paraWhileElse < 5 :
+    paraWhileElse += 1
+    print (f"Iteration no. {paraWhileElse}")
+else:
+    print (f"Whoops! Se acabó el while loop")
+print ("End of while loop")
+
+"""En python, los ciclos for y while pueden tener un statement
+else, que se ejecuta en caso de que se terminen las iteraciones
+del ciclo"""
+
+for letter in 'Python':
+    if letter == 'h':
+        break
+    print ('Current Letter: ', letter)
+
+print ("\n")
+for letter in 'Python':
+    if letter == 'h':
+        continue
+    print ('Current Letter :', letter)
+
+'''Los ciclos for y while también pueden usar break para
+detener el flujo del ciclo, y continue para saltar a la
+siguiente iteración del ciclo'''
+
+n = int(input("\n Hola humano, dame un número"))
+divisor = 2
+while n>1:
+    if n%divisor ==0:
+        print (divisor)
+        n = n/divisor
+    else:
+        divisor+=1
+
+for letter in 'Python':
+    if letter == 'h':
+        pass #Pass statement does absolutly nothing :thumbs_up:
+        ... #Python also allows using 3 dots called Ellipses as a pass statement
+    print('Current letter: ', letter)
