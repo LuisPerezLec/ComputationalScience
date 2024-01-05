@@ -67,4 +67,15 @@ print ("list after function call", varDict)
 #Positional-only arguments
 #Keyword-only arguments
 #Arbitrary or variable-length arguments
+#
+# def function (a, b, /, c, d, e=v1, f=v2, *arg, *, g, h, i=v3, **kwarg)
+# Where a,b are positional-only, c,d are regular positional
+# e and f are default args, *arg is arbitrary positional
+# g,h,i are keyword only and **kwarg is arbitrary kw args
 
+#You can call a function by positional arguments:
+#printinfo ("Luis", 21)
+#or by keyword arguments
+#printinfo (name = "Lui", age = 21)
+
+#https://www.tutorialspoint.com/python/python_keyword_arguments.htm
